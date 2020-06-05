@@ -1,0 +1,18 @@
+<div>
+    <div class="mb-3 mt-5 ml-5 mr-5">
+        <input class="form-control" placeholder="Email" [(ngModel)]="email">
+    </div>
+    <div class="mb-3 ml-5 mr-5">
+        <input class="form-control" placeholder="Password" [(ngModel)]="password">
+    </div>
+    <div class="mb-3 ml-5 mr-5">
+        <button type="button" class="btn btn-primary" (click)="onUserlogin()" >Sign In</button>
+    </div>
+    <div class="alert alert-primary mb-3 ml-5 mr-5" role="alert" *ngIf="message">
+        {{message}}
+    </div>
+    <div class="align-items-center mb-5">
+        <div>Email: {{ email }}</div>
+        <div>Password: {{ password }}</div>
+    </div>
+</div>
