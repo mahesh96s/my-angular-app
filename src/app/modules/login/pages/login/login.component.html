@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="loginbox mx-auto">
+        <div class="card text-white shadow-lg rounded">
+            <div class="card-header bg-danger">
+                Shopping
+            </div>
+            <div class="card-body bg-dark">
+                <div class="alert alert-danger mb-1 mt-1" role="alert" *ngIf="isInvalid">
+                    {{message}}
+                </div>
+                <div class="mb-1 mt-1">
+                    <input class="form-control" placeholder="Email" [(ngModel)]="email">
+                </div>
+                <div class="mb-1 mt-1">
+                    <input class="form-control" placeholder="Password" [(ngModel)]="password">
+                </div>
+                <div class="mb-1 mt-1 text-center">
+                    <button type="button" class="btn btn-primary ml-1 mr-1" (click)="onUserlogin()">Sign In</button>
+                    <button type="button" class="btn btn-primary ml-1 mr-1" (click)="onUserlogin()">Sign Up</button>
+                </div>
+                <div class="mb-1 mt-1">
+                    <a [routerLink]="['/forget-password']">Forget Password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
